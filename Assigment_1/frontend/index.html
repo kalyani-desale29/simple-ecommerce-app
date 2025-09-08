@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>E-commerce Store</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header><i class="fas fa-shopping-cart"></i> My E-commerce Store</header>
+
+    <div class="container">
+      <!-- Left: Items -->
+      <div class="content">
+        <!-- Filters -->
+        <div class="filters">
+          <label>Filter by Category:</label>
+          <select id="categoryFilter">
+            <option value="">All</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Fashion">Fashion</option>
+            <option value="Books">Books</option>
+          </select>
+
+          <label>Max Price:</label>
+          <input type="number" id="priceFilter" placeholder="Enter price" />
+          <button onclick="loadItems()">
+            <i class="fas fa-filter"></i> Apply
+          </button>
+        </div>
+
+        <!-- Items -->
+        <h2>Items</h2>
+        <div id="items"></div>
+      </div>
+
+      <!-- Right: Cart -->
+      <div id="cart">
+        <h2><i class="fas fa-shopping-bag"></i> Your Cart</h2>
+        <div id="cart-items"></div>
+        <div id="cart-total"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
